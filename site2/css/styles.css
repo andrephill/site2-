@@ -1,0 +1,457 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --verde-escuro: #14424b;
+    --verde: #2f9364;
+    --orange: #ff7c37;
+    --degrade-btn: linear-gradient(#fe9611, #ff5c00);
+    --color-p: #a1a1a1;
+    --color-p-2: #868585;
+}
+
+.background-verde {
+    background: var(--orange);
+}
+
+/* classes reutilizáveis inicio */
+.container {
+    max-width: 1440px;
+    padding: 0 5%; /* delimita as laterais da tela */
+    margin: 0 auto;
+}
+
+section, footer {
+    padding: 2.7rem 0;
+}
+
+.btn-gradiente {
+    padding: 10px 25px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    background-image: var(--degrade-btn);
+}
+/* classes reutilizáveis fim */
+
+/* classes do conteúdo */
+nav {
+    display: flex; /* coloca o logo e o menu lado a lado */
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.logo a {
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+}
+
+.ul {
+    display: flex;
+    align-items: center;
+}
+
+.ul li {
+    margin: 0 35px;
+    font-size: 15px;
+}
+
+.ul li a {
+    color: white;
+}
+
+/* main */
+main .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.main-text {
+    width: 50%;
+    color: white;
+}
+
+.main-text h1 {
+    font-size: 4.5rem;
+}
+
+.main-text div {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.main-img {
+    width: 50%;
+}
+
+.main-img img {
+    width: 100%;
+}
+/* main fim */
+
+/* menu icon */
+.menu-icon {
+    display: none;/*para desaparecer o botão*/
+    position: relative;/*para ativar o z-index*/
+    z-index: 10;
+}
+/* menu icon fim */
+
+/* resultados */
+.resultados {
+    background: #14424b;
+}
+.resultados .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.resultados .resultados-text {
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 600;
+    width: 50%; /*50% pq está dividindo o espaço lateral com outra div*/
+}
+
+.resultados .resultados-numero {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.resultados .resultados-numero p {
+    text-align: center;
+    margin: 0 30px;
+    font-size: 20px;
+}
+
+.resultados .resultados-numero p span {
+    font-size: 30px;
+    font-weight: 600;
+}
+/* resultados fim */
+
+/* section diferencias */
+.diferencias .container {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px auto;
+}
+
+.diferencias .card {
+    width: 30%;
+    cursor: pointer;
+    padding: 30px;
+    border-radius: 15px;
+    transition: 0.3s; /* para suaviar o efeito do hover*/
+}
+
+.diferencias .card:hover {
+    box-shadow: 0 -10px 67px 8px #e6e6fa85;
+}
+
+.diferencias .card img {
+    width: 60px;
+}
+
+.diferencias .card .titulo {
+    margin: 13px 0;
+    font-weight: 600;
+}
+/* section diferencias fim */
+
+/* section casa */
+.casa .container {
+    display: flex;
+    align-items: center;
+}
+
+.casa .casa-img {
+    width: 50%;
+}
+
+.casa .casa-img img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.casa .casa-text {
+    width: 50%;
+    padding-left: 90px;
+}
+
+.casa .casa-text h2 {
+    font-size: 2.5rem;
+}
+
+.casa .casa-text p {
+    margin: 20px 0;
+    color: var(--color-p);
+}
+
+.casa .casa-text p b {
+    color: black;
+    font-size: 25px;
+}
+
+.melhores-lugares .azul {
+    font-size: 24px;
+    font-weight: 600;
+    color: #0060f0;
+}
+
+.melhores-lugares h2 {
+    font-size: 2.5rem;
+}
+
+.melhores-lugares .cards {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.melhores-lugares .cards .card-item {
+    width: 30%;
+    text-align: center;
+    padding: 30px 0;
+    border-radius: 20px;
+    box-shadow: 0 35px 97px -15px rgba(0, 0, 0, 0.08);
+}
+
+.melhores-lugares .cards img {
+    width: 80px;
+}
+
+.melhores-lugares .cards .local-casa {
+    margin: 5px 0;
+    color: var(--color-p);
+}
+
+.melhores-lugares .cards .nome-casa {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.melhores-lugares .cards .contato {
+    margin-bottom: 20px;
+    color: var(--color-p-2);
+}
+
+.melhores-lugares .cards button {
+    padding: 10px 20px;
+    color:white;
+    background-color: var(--orange);
+    border: none;
+}
+/* section casa fim */
+
+/* section newsletter */
+.newsletter {
+    margin-top: 50px;
+    background-color: var(--verde);
+}
+
+.newsletter .box-newsletter {
+    text-align: center;
+    padding: 100px;
+    background-image: url(../img/background-newsletter.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+}
+
+.newsletter .box-newsletter h2 {
+    font-size: 2.5rem;
+}
+
+.newsletter .box-newsletter p {
+    margin: 13px 0;
+}
+
+.newsletter .box-newsletter input {
+    width: 35%;
+    padding: 15px;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    color: #00000098;
+    background-color: #faefda;
+}
+
+.newsletter .box-newsletter button {
+    font-size: 15px;
+    border: none;
+    outline: none;
+    padding: 15px;
+    border-radius: 14px;
+    color: white;
+    background-color: var(--verde);
+    cursor: pointer;
+}
+/* section newsletter fim */
+
+/* footer inicio */
+footer {
+    background-color: var(--verde-escuro);
+}
+footer .container {
+    display: flex;
+    color: white;
+}
+footer .container ul {
+    width: 25%;
+}
+footer .container h3 {
+    margin-bottom: 16px;
+    font-weight: 600;
+}
+footer .container .redes-sociais img {
+    margin-right: 10px;
+}
+footer .container ul > p {
+    margin-bottom: 40px;
+}
+footer .container li {
+    margin: 20px 0;
+}
+footer .container a {
+    color: white;
+}
+/* footer fim */
+
+/* responsivo */
+@media (max-width: 960px) {
+    .menu-icon {
+        display: block;/*faz o botão aparecer*/
+    }
+    .ul {/*esse código faz desaparecer o menu e vai ser usado JS para fazer aparecer qdo clicar no botão*/
+        position: fixed;
+        background: var(--verde-escuro);
+        top: 0;
+        width: 100%;
+        height: 100%;
+        left: 100%;
+        transition: 0.3s;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .ul li {
+        font-size: 20px;
+        margin: 20px 0;
+    }
+    .ul.ativo {
+        left: 0;
+    }
+    main .container {
+        flex-direction: column;
+    }
+    main .container .main-img,
+    main .container .main-text {
+        width: 100%;
+        text-align: center;
+    }
+    main .container .main-text h1 {
+        font-size: 4rem;
+    }
+    main .container .main-text div {
+        justify-content: center;
+    }
+    .resultados .container {
+        flex-direction: column;
+    }
+    .resultados .resultados-text, .resultados .resultados-numero {
+        width: 100%;
+        text-align: center;
+    }
+    .resultados-numero {
+        margin-top: 30px;
+    }
+    .diferencias .container {
+        flex-direction: column;
+    }
+    .diferencias .card {
+        width: 100%;
+    }
+    .casa .container {
+        flex-direction: column-reverse;
+    }
+    .casa .casa-text, .casa .casa-img {
+        width: 100%;
+        text-align: center;
+        padding: 0;
+    }
+    .melhores-lugares .cards {
+        flex-direction: column;
+    }
+    .melhores-lugares .cards .card-item {
+        width: 100%;
+    }
+
+    .newsletter .box-newsletter {
+        padding: 50px;
+    }
+
+    .newsletter .box-newsletter h2 {
+        font-size: 2rem;
+    }
+
+    .newsletter .box-newsletter input {
+        width: 90%;
+    }
+
+    .newsletter .box-newsletter button {
+        width: 50%;
+        margin-top: 20px;
+    }
+    footer .container {
+        flex-direction: column;
+    }
+    footer .container ul {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width:440px) {
+    .resultados .resultados-numero {
+        flex-direction: column;
+    }
+    main .container .main-text h1 {
+        font-size: 3rem;
+    }
+}
+/* responsivo fim */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
